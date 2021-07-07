@@ -18,6 +18,17 @@ sed -i "s/'UTC'/'CST-8'\n   set system.@system[-1].zonename='Asia\/Shanghai'/g" 
 # firewall custom
 echo "iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE" >> package/network/config/firewall/files/firewall.user
 
+# 补丁和脚本
+###########################################################################
+CPUSTAT_SCRIPT="${PWD}/files/cpustat"
+CPUSTAT_SCRIPT_PY="${PWD}/files/cpustat.py"
+CPUSTAT_PATCH="${PWD}/files/luci-admin-status-index-html.patch"
+CPUSTAT_PATCH_02="${PWD}/files/luci-admin-status-index-html-02.patch"
+GETCPU_SCRIPT="${PWD}/files/getcpu"
+FIX_CPU_FREQ="${PWD}/files/fixcpufreq.pl"
+CPUFREQ_INIT="${PWD}/files/s905d/cpufreq"
+###########################################################################
+
 # Add luci-app-ssr-plus
 pushd package/lean
 git clone --depth=1 https://github.com/fw876/helloworld
