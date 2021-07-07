@@ -19,7 +19,7 @@ env:
   CONFIG_FILE: mini.config
   DIY_SH: diy.sh
   TZ: Asia/Shanghai
-  RELEASE: true
+  RELEASE: false
 
 jobs:
   build:
