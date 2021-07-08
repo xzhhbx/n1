@@ -127,7 +127,7 @@ jobs:
         types: s905d
         out: ${{ env.UPLOAD }}
         sub-name: ${{ env.SUB_VERSION}}
-        whoami: mingxiaoyu
+        whoami: xzhhbx
         openwrt-path: openwrt/bin/targets/*/*
         
     - name: Create Release
